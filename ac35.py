@@ -56,6 +56,7 @@ def text_completion(system_prompt, user_prompt, base64_images):
     response = client.invoke_model(
         modelId=model_id,
         contentType="application/json",
+        accept='application/json',
         body=json.dumps(payload)
     )
 

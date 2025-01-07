@@ -38,5 +38,7 @@ def text_completion(system_prompt, user_prompt, base64_images):
     response = client.chat.completions.create(
         model=_model,
         messages=messages,
+        response_format={"type": "json_object"}
+
     )
     return response.choices[0].message.content
